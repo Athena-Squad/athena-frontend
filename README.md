@@ -17,7 +17,7 @@ O projeto foi desenhado seguindo boas práticas de Engenharia de Software, utili
 
 **Front-end:**
 - HTML5, CSS3 e JavaScript
-- Deploy Contínuo: Netlify
+- Deploy Contínuo: Vercel
 
 **Back-end & Infraestrutura:**
 - Java 17+ com Spring Boot
