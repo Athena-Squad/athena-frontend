@@ -1,0 +1,284 @@
+<!doctype html><html>
+  
+<head>
+  
+  <meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+  <link rel="stylesheet" href="../css/base-alunos.css">
+</head>
+
+<body>
+<title>Athena Base de Alunos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="base_d_alunos.css">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M6.5 6.5v11M17.5 6.5v11M3.5 9v6M20.5 9v6M6.5 12h11"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M6 17v-3M11 17v-5M16 17v-4M21 17v-8" transform="translate(-1 0)"/><path d="m4 9 5-4 4 3 6-5"/></symbol>
+    <symbol id="i-trend-up" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-calendar-check" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M9 10h.01M15 10h.01"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-chevron-r" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M21.2 5.8 18.2 2.8a1.6 1.6 0 0 0-2.3 0L3 15.7V21h5.3L21.2 8a1.6 1.6 0 0 0 0-2.2z"/><path d="m15 5 4 4"/></symbol>
+    <symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  </defs>
+</svg>
+
+<div class="app">
+  <aside class="side">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 48 28" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" aria-hidden="true">
+        <path d="M5 8v12M11 4v20M43 8v12M37 4v20M11 14h26"/>
+      </svg>
+      <div><b>ATHENA</b><small>Personal Trainer</small></div>
+    </div>
+
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#"><svg class="i"><use href="#i-home"/></svg>Início</a>
+      <a href="#" aria-current="page"><svg class="i"><use href="#i-users"/></svg>Base de Alunos</a>
+      <a href="#"><svg class="i"><use href="#i-dumbbell"/></svg>Fichas de Treino</a>
+      <a href="#"><svg class="i"><use href="#i-chart"/></svg>Avaliações</a>
+      <a href="#"><svg class="i"><use href="#i-trend-up"/></svg>Progresso</a>
+      <a href="#"><svg class="i"><use href="#i-calendar"/></svg>Calendário</a>
+      <a href="#"><svg class="i"><use href="#i-message"/></svg>Mensagens<span class="badge">3</span></a>
+      <a href="#"><svg class="i"><use href="#i-wallet"/></svg>Financeiro</a>
+      <a href="#"><svg class="i"><use href="#i-settings"/></svg>Configurações</a>
+    </nav>
+
+    <div class="side-foot">
+      <div class="quote">
+        <p>“Grandes resultados não vêm do acaso, mas da constância.”</p>
+        <div class="rule"><svg class="i"><use href="#i-dumbbell"/></svg><i></i></div>
+      </div>
+      <p class="ver">Athena Personal Trainer &nbsp;v1.0</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1>Olá, Sandro!</h1>
+        <p class="eyebrow">Disciplina hoje, resultados amanhã.</p>
+      </div>
+      <div class="tools">
+        <label class="search" for="busca-geral">
+          <svg class="i"><use href="#i-search"/></svg>
+          <input id="busca-geral" type="search" placeholder="Buscar aluno, ficha ou exercício..." autocomplete="off">
+        </label>
+        <button class="icon-btn" type="button" aria-label="Notificações"><svg class="i"><use href="#i-bell"/></svg><span class="dot-on"></span></button>
+        <button class="user" type="button" aria-label="Menu do usuário">
+          <span class="avatar">SJ</span>
+          <div><b>Sandro Joaquim</b><small>Personal Trainer</small></div>
+          <svg class="i"><use href="#i-chevron"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="grid stats" aria-label="Resumo">
+      <article class="card stat">
+        <div class="stat-top"><span>Total de Alunos</span><svg class="i"><use href="#i-users"/></svg></div>
+        <div class="v">18</div>
+        <span class="n up">+2 este mês <svg class="i"><use href="#i-arrow-ur"/></svg></span>
+      </article>
+      <article class="card stat">
+        <div class="stat-top"><span>Fichas Ativas</span><svg class="i"><use href="#i-dumbbell"/></svg></div>
+        <div class="v">16</div>
+        <span class="n up">+1 este mês <svg class="i"><use href="#i-arrow-ur"/></svg></span>
+      </article>
+      <article class="card stat">
+        <div class="stat-top"><span>Avaliações Pendentes</span><svg class="i"><use href="#i-calendar-check"/></svg></div>
+        <div class="v">3</div>
+        <a class="n" href="#">ver detalhes <svg class="i"><use href="#i-arrow-r"/></svg></a>
+      </article>
+      <article class="card stat">
+        <div class="stat-top"><span>Meta de Crescimento</span><svg class="i"><use href="#i-trend-up"/></svg></div>
+        <div class="v">78%</div>
+        <div class="track" role="img" aria-label="78% da meta"><span style="width:78%"></span></div>
+      </article>
+    </section>
+
+    <section class="grid row-main">
+      <article class="card" aria-labelledby="t-alunos">
+        <div class="sec-head">
+          <div class="sec-title">
+            <span class="ic"><svg class="i"><use href="#i-users"/></svg></span>
+            <div>
+              <h2 id="t-alunos">Base de Alunos</h2>
+              <p class="sub">Gerencie seus alunos, acompanhe o progresso e mantenha o contato.</p>
+            </div>
+          </div>
+          <button class="btn" type="button"><svg class="i"><use href="#i-plus"/></svg>Adicionar Aluno</button>
+        </div>
+
+        <div class="filters">
+          <label class="search" for="q-alunos">
+            <svg class="i"><use href="#i-search"/></svg>
+            <input id="q-alunos" type="search" placeholder="Buscar por nome, telefone ou objetivo..." autocomplete="off">
+          </label>
+          <label class="select" for="f-plano-a">
+            <select id="f-plano-a" aria-label="Filtrar por plano">
+              <option value="">Todos os planos</option>
+              <option>Plano A</option><option>Plano B</option><option>Plano C</option><option>Plano D</option>
+            </select>
+            <svg class="i"><use href="#i-chevron"/></svg>
+          </label>
+          <label class="select" for="f-status">
+            <select id="f-status" aria-label="Filtrar por status">
+              <option value="">Todos os status</option>
+              <option>Ativo</option><option>Pausado</option>
+            </select>
+            <svg class="i"><use href="#i-chevron"/></svg>
+          </label>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Aluno</th><th>Objetivo</th><th>Plano</th><th>Status</th><th>Progresso</th><th>Ações</th></tr>
+            </thead>
+            <tbody id="alunos"></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card" aria-labelledby="t-fichas">
+        <div class="sec-head">
+          <div class="sec-title">
+            <span class="ic"><svg class="i"><use href="#i-dumbbell"/></svg></span>
+            <div>
+              <h2 id="t-fichas">Fichas de Treino</h2>
+              <p class="sub">Acesse e gerencie as fichas de treino dos seus alunos.</p>
+            </div>
+          </div>
+          <button class="btn" type="button"><svg class="i"><use href="#i-plus"/></svg>Nova Ficha</button>
+        </div>
+
+        <div class="filters">
+          <label class="search" for="q-fichas">
+            <svg class="i"><use href="#i-search"/></svg>
+            <input id="q-fichas" type="search" placeholder="Buscar ficha de treino..." autocomplete="off">
+          </label>
+          <label class="select" for="f-plano-f">
+            <select id="f-plano-f" aria-label="Filtrar fichas por plano">
+              <option value="">Todos os planos</option>
+              <option>Plano A</option><option>Plano B</option><option>Plano C</option>
+              <option>Plano D</option><option>Plano E</option><option>Plano F</option>
+            </select>
+            <svg class="i"><use href="#i-chevron"/></svg>
+          </label>
+          <label class="select" for="f-aluno-f">
+            <select id="f-aluno-f" aria-label="Filtrar fichas por aluno">
+              <option value="">Todos os alunos</option>
+              <option value="com">Com aluno</option>
+              <option value="livre">Disponíveis</option>
+            </select>
+            <svg class="i"><use href="#i-chevron"/></svg>
+          </label>
+        </div>
+
+        <ul class="fichas" id="fichas"></ul>
+      </article>
+    </section>
+  </main>
+</div>
+
+<script>
+(function () {
+  var alunos = [
+    ['Lucas Ferreira', '(83) 98765-4321', 'Hipertrofia', 'Plano A', 'Ativo', 72],
+    ['Mariana Costa', '(83) 99123-4567', 'Emagrecimento', 'Plano B', 'Ativo', 58],
+    ['Rafael Silva', '(83) 98876-5432', 'Hipertrofia', 'Plano A', 'Ativo', 81],
+    ['Juliana Santos', '(83) 99654-3210', 'Condicionamento', 'Plano C', 'Ativo', 65],
+    ['Gabriel Martins', '(83) 97012-3456', 'Hipertrofia', 'Plano A', 'Ativo', 49],
+    ['Camila Oliveira', '(83) 98567-8901', 'Emagrecimento', 'Plano B', 'Ativo', 76],
+    ['Thiago Pereira', '(83) 97234-5678', 'Saúde e Bem-estar', 'Plano D', 'Pausado', 32],
+    ['Fernanda Lima', '(83) 99876-1234', 'Hipertrofia', 'Plano A', 'Ativo', 88],
+    ['Pedro Almeida', '(83) 97123-4567', 'Condicionamento', 'Plano C', 'Ativo', 61],
+    ['Beatriz Souza', '(83) 99678-4321', 'Emagrecimento', 'Plano B', 'Ativo', 74]
+  ];
+  var fichas = [
+    ['Plano A', 'Hipertrofia (Full Body)', 'Treino completo · 5 dias/semana', 12, 'Lucas Ferreira', 'Ativa', 'i-dumbbell', 't'],
+    ['Plano B', 'Emagrecimento (HIIT)', 'Cardio + Musculação · 4 dias/semana', 10, 'Mariana Costa', 'Ativa', 'i-dumbbell', 't'],
+    ['Plano C', 'Condicionamento', 'Funcional + Mobilidade · 3 dias/semana', 8, 'Juliana Santos', 'Ativa', 'i-activity', 't'],
+    ['Plano D', 'Saúde e Bem-estar', 'Força + Mobilidade · 3 dias/semana', 9, 'Thiago Pereira', 'Pausada', 'i-activity', 'a'],
+    ['Plano E', 'Definição', 'Musculação + Cardio · 5 dias/semana', 11, '', 'Ativa', 'i-activity', 'b'],
+    ['Plano F', 'Ganho de Massa', 'Divisão ABC · 6 dias/semana', 14, '', 'Ativa', 'i-users', 'n']
+  ];
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function norm(s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function initials(name) { var p = name.split(' '); return (p[0][0] + p[p.length - 1][0]).toUpperCase(); }
+  function ico(id) { return '<svg class="i"><use href="#' + id + '"/></svg>'; }
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  function renderAlunos() {
+    var g = norm($('busca-geral').value), q = norm($('q-alunos').value);
+    var plano = $('f-plano-a').value, status = $('f-status').value;
+    var rows = alunos.filter(function (a) {
+      var hay = norm(a.join(' '));
+      return (!g || hay.indexOf(g) > -1) && (!q || hay.indexOf(q) > -1) &&
+        (!plano || a[3] === plano) && (!status || a[4] === status);
+    });
+    $('alunos').innerHTML = rows.length ? rows.map(function (a) {
+      return '<tr>' +
+        '<td><div class="who"><span class="avatar">' + initials(a[0]) + '</span><div><b>' + esc(a[0]) + '</b><small>' + esc(a[1]) + '</small></div></div></td>' +
+        '<td>' + esc(a[2]) + '</td><td>' + esc(a[3]) + '</td>' +
+        '<td><span class="pill ' + (a[4] === 'Ativo' ? 'ok' : 'pause') + '">' + a[4] + '</span></td>' +
+        '<td><div class="pc"><span>' + a[5] + '%</span><div class="track" role="img" aria-label="Progresso de ' + a[5] + '%"><span style="width:' + a[5] + '%"></span></div></div></td>' +
+        '<td><div class="acts">' +
+          '<button class="ib" type="button" aria-label="Ver ' + esc(a[0]) + '">' + ico('i-eye') + '</button>' +
+          '<button class="ib" type="button" aria-label="Editar ' + esc(a[0]) + '">' + ico('i-pencil') + '</button>' +
+          '<button class="ib" type="button" aria-label="Mais ações para ' + esc(a[0]) + '">' + ico('i-more') + '</button>' +
+        '</div></td></tr>';
+    }).join('') : '<tr class="empty"><td colspan="6">Nenhum aluno encontrado.</td></tr>';
+  }
+
+  function renderFichas() {
+    var g = norm($('busca-geral').value), q = norm($('q-fichas').value);
+    var plano = $('f-plano-f').value, alu = $('f-aluno-f').value;
+    var list = fichas.filter(function (f) {
+      var hay = norm(f.slice(0, 5).join(' '));
+      return (!g || hay.indexOf(g) > -1) && (!q || hay.indexOf(q) > -1) && (!plano || f[0] === plano) &&
+        (!alu || (alu === 'com' ? f[4] : !f[4]));
+    });
+    $('fichas').innerHTML = list.length ? list.map(function (f) {
+      return '<li class="ficha">' +
+        '<span class="f-ic ' + f[7] + '">' + ico(f[6]) + '</span>' +
+        '<div><div class="f-title">' + f[0] + ' - ' + esc(f[1]) + '</div><div class="f-meta">' + esc(f[2]) + '</div>' +
+        '<div class="f-foot"><span>' + ico('i-dumbbell') + f[3] + ' exercícios</span><span>' + ico('i-user') + (f[4] ? esc(f[4]) : 'Disponível para novos alunos') + '</span></div></div>' +
+        '<div class="f-side"><span class="pill ' + (f[5] === 'Ativa' ? 'ok' : 'pause') + '">' + f[5] + '</span>' +
+        '<button class="btn-ghost" type="button">Ver ficha ' + ico('i-chevron-r') + '</button></div></li>';
+    }).join('') : '<li class="none">Nenhuma ficha encontrada.</li>';
+  }
+
+  function render() { renderAlunos(); renderFichas(); }
+  ['busca-geral', 'q-alunos', 'q-fichas', 'f-plano-a', 'f-status', 'f-plano-f', 'f-aluno-f'].forEach(function (id) {
+    $(id).addEventListener('input', render);
+  });
+  render();
+
+  document.querySelectorAll('.nav a, .stat a.n').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); });
+  });
+})();
+</script>
+
+</body></html>

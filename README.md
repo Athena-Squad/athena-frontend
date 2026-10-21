@@ -12,26 +12,36 @@ O **Athena** nasce com o objetivo de solucionar essa dor real, oferecendo uma pl
 - **Prescrição de Treinos:** Interface para criação de fichas com exercícios, séries e repetições.
 - **Registro de Execução:** Painel interativo para o aluno marcar treinos concluídos e registrar frequência.
 
-## 🛠️ Stack Tecnológica
-O projeto foi desenhado seguindo boas práticas de Engenharia de Software, utilizando uma arquitetura baseada em APIs REST e separação de responsabilidades (Front-end e Back-end).
+## 🛠️ Stack Tecnológica e Arquitetura
+O projeto adotou uma arquitetura ágil **Serverless/BaaS (Backend as a Service)**, eliminando a necessidade de uma API intermediária tradicional e delegando a regra de negócios de segurança diretamente para o banco de dados.
 
-**Front-end:**
-- HTML5, CSS3 e JavaScript
-- Deploy Contínuo: Vercel
+**Front-end (Client-Side):**
+- HTML5, CSS3 e JavaScript (Vanilla)
+- Padrão de Módulos (ES Modules)
+- Hospedagem e CI/CD: **Vercel**
 
-**Back-end & Infraestrutura:**
-- Java 17+ com Spring Boot
-- Banco de Dados: PostgreSQL (Supabase)
-- Deploy da API: Railway
+**Back-end & Segurança (BaaS):**
+- **Supabase** (PostgreSQL Gerenciado)
+- Autenticação nativa (Supabase Auth)
+- Controle de acesso via **RLS (Row Level Security)**
 
 ## ⚙️ Como Executar Localmente
-Para clonar e rodar este projeto em sua máquina, você precisará do [Git](https://git-scm.com), [Java JDK 17+](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) e uma IDE de sua preferência (IntelliJ, VS Code, Eclipse).
+Para clonar e rodar este projeto em sua máquina, você precisará apenas do [Git](https://git-scm.com), de uma IDE como o **VS Code**, e da extensão **Live Server**.
 
 ```bash
 # Clone este repositório
-$ git clone [https://github.com/athena-squad/athena-backend.git](https://github.com/athena-squad/athena-backend.git)
+$ git clone https://github.com/athena-squad/athena-frontend.git
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd athena-backend
+# Acesse a pasta do projeto
+$ cd athena-frontend
+```
 
-# O projeto rodará na porta:8080
+**Importante:** Como o projeto utiliza o padrão de importação de módulos do JavaScript (`type="module"`), não é possível abrir o arquivo `index.html` com um duplo-clique comum. 
+1. Abra a pasta no **VS Code**.
+2. Clique no botão **"Go Live"** no canto inferior direito (Extensão Live Server).
+3. O projeto rodará em `http://127.0.0.1:5500`.
+
+## 👨‍💻 Autores e Contribuições
+Este projeto está sendo desenvolvido em Sprints ágeis pela equipe de Engenharia.
+* **UI/UX e Telas:** Prototipação e design de interfaces implementados por Danilo.
+* **Arquitetura e Refatoração:** Migração para BaaS e padronização estrutural lideradas pelo Tech Lead (Sandro).
