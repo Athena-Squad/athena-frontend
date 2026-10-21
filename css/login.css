@@ -118,7 +118,9 @@ input {
 .submit:hover {
   background: #1e293b;
 }
-.logo img {
-  width: 60px;  
-  height: auto;
+.dumbbell-icon {
+  width: 64px;
+  height: 40px;
+  color: #fff;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.35));
 }
