@@ -45,11 +45,71 @@
 
         <button type = "submit" class="submit">Entrar no sistema →</button>
       </form>
+      <a class="form-link" href="./cadastro.html">Não tem conta? Cadastre-se como aluno</a>
 
     </div>
   </div>
 
-    <!-- Linkando o JavaScript no final do body para carregar mais rápido -->
-    <script src="./js/mock-login.js"></script>
+<!-- Script de Autenticação e Registro no Supabase -->
+    <script type="module">
+        // 1. OS IMPORTS DEVEM FICAR NO TOPO ABSOLUTO DO SCRIPT
+        import { fazerLogin, obterPerfilLogado } from './js/api.js';
+        import { supabase } from './js/supabase-client.js';
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Lógica do Toggle (Alternar entre Professor e Aluno)
+            const toggleButtons = document.querySelectorAll('.toggle button');
+            toggleButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    toggleButtons.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                });
+            });
+
+            // Lógica do Login Real
+            const formLogin = document.getElementById('form-login');
+            
+            if (formLogin) {
+                formLogin.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    const emailInput = document.getElementById('email').value;
+                    const senhaInput = document.getElementById('senha').value;
+                    const tipoUsuario = document.querySelector('.toggle button.active').innerText.trim().toLowerCase();
+                    const btnSubmit = formLogin.querySelector('.submit');
+
+                    const textoOriginal = btnSubmit.innerText;
+                    btnSubmit.innerText = "Autenticando...";
+                    btnSubmit.style.opacity = "0.7";
+                    btnSubmit.disabled = true;
+
+                    try {
+                        await fazerLogin(emailInput, senhaInput);
+                        const sessao = await obterPerfilLogado();
+                        if (!sessao) throw new Error('Não foi possível obter o perfil da conta autenticada.');
+                        const tipoReal = String(sessao.perfil.tipo_perfil || '').toLowerCase();
+                        if (tipoUsuario !== tipoReal) {
+                            await supabase.auth.signOut();
+                            throw new Error(`Esta conta é do tipo ${tipoReal || 'não definido'}. Selecione o tipo correto para entrar.`);
+                        }
+
+                        if (tipoReal === 'professor') {
+                            window.location.href = './pages/base-alunos.html'; 
+                        } else if (tipoUsuario === 'aluno') {
+                            window.location.href = './pages/painel-aluno.html';
+                        }
+                    } catch (error) {
+                        alert(error.message.startsWith('Esta conta é do tipo') ? error.message : "Erro ao fazer login: " + error.message);
+                        console.error("Falha na autenticação:", error);
+                        
+                        btnSubmit.innerText = textoOriginal;
+                        btnSubmit.style.opacity = "1";
+                        btnSubmit.disabled = false;
+                    }
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>

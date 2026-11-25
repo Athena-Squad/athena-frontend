@@ -175,6 +175,34 @@
   .acts { display: flex; gap: 2px; }
   .ib { width: 30px; height: 30px; border-radius: 8px; border: 0; background: transparent; color: var(--fg-soft); display: grid; place-items: center; cursor: pointer; font-size: 16px; }
   .ib:hover { background: var(--card-2); color: var(--fg); }
+  .athena-backdrop { position: fixed; z-index: 100; inset: 0; display: grid; place-items: center; padding: 20px; background: rgba(0,0,0,.72); }
+  .athena-modal { width: min(620px, 100%); max-height: min(88vh, 900px); overflow: auto; border: 1px solid var(--line); border-radius: 16px; padding: 20px; background: var(--card); color: var(--fg); box-shadow: 0 24px 70px rgba(0,0,0,.5); }
+  .athena-modal header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+  .athena-modal h2, .athena-modal h3 { margin: 0 0 12px; font-family: var(--font-display); }
+  .athena-modal header h2 { margin: 0; }
+  .athena-close { border: 0; background: transparent; color: var(--fg-soft); font-size: 26px; cursor: pointer; }
+  .athena-modal form { display: grid; gap: 12px; }
+  .athena-modal label { display: grid; gap: 6px; color: var(--fg-soft); font-size: 12px; }
+  .athena-modal input, .athena-modal select { width: 100%; min-height: 40px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 9px; background: var(--card-2); color: var(--fg); font: inherit; }
+  .athena-modal .athena-check { display: flex; align-items: center; }
+  .athena-modal .athena-check input { width: auto; min-height: 0; }
+  .exercise-row { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+  .exercise-row legend { color: var(--teal); }
+  .athena-candidate-list { display: grid; gap: 8px; padding: 0; list-style: none; }
+  .athena-candidate-list li { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px; border-radius: 10px; background: var(--card-2); }
+  .student-actions-popover, .global-search-results { position: absolute; z-index: 40; min-width: 200px; padding: 6px; border: 1px solid var(--line); border-radius: 10px; background: #11171b; box-shadow: 0 12px 28px rgba(0,0,0,.4); }
+  .student-actions-popover { right: 8px; top: 38px; }
+  .student-actions-popover button, .global-search-results button { display: flex; width: 100%; padding: 10px; border: 0; border-radius: 7px; background: transparent; color: var(--fg-soft); text-align: left; cursor: pointer; }
+  .student-actions-popover button:hover, .global-search-results button:hover { background: var(--card-2); color: var(--fg); }
+  .acts { position: relative; }
+  .global-search-results { top: calc(100% + 6px); left: 0; right: 0; max-height: 340px; overflow: auto; }
+  .global-search-results[hidden] { display: none; }
+  .global-search-results button { display: grid; gap: 2px; }
+  .global-search-results small { color: var(--teal); }
+  .global-search-results p { padding: 8px; color: var(--muted); }
+  .search-highlight { outline: 1px solid var(--teal); }
+  .search { position: relative; }
+  @media (max-width: 620px) { .exercise-row { grid-template-columns: 1fr 1fr; } }
   .empty td { text-align: center; padding: 28px 8px; color: var(--muted); }
 
   .pill { display: inline-block; padding: 3px 10px; border-radius: 99px; border: 1px solid; font: 600 11px/1.3 var(--font-body); white-space: nowrap; }

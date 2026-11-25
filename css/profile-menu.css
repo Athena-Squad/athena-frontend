@@ -1,0 +1,29 @@
+.profile-menu-wrap { position: relative; }
+.profile-menu-wrap .user { display: flex; align-items: center; gap: 10px; padding: 0; border: 0; background: transparent; color: inherit; text-align: left; cursor: pointer; }
+.profile-menu-wrap .user b { display: block; font: 600 12.5px/1.2 var(--font-body); }
+.profile-menu-wrap .user small { display: block; color: var(--muted); font-size: 11px; }
+.user[aria-expanded="true"] .profile-chevron { transform: rotate(180deg); }
+.profile-chevron { transition: transform .18s ease; }
+.profile-menu {
+  position: absolute; z-index: 20; top: calc(100% + 12px); right: 0; width: min(280px, calc(100vw - 32px));
+  padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: #11171b;
+  box-shadow: 0 16px 40px rgba(0,0,0,.38);
+}
+.profile-menu[hidden] { display: none; }
+.profile-menu-head { padding: 10px 12px 12px; }
+.profile-menu-head strong { display: block; overflow: hidden; color: var(--fg); font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+.profile-menu-head span { display: inline-block; margin-top: 6px; padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 10px; }
+.profile-menu a, .profile-menu button { width: 100%; min-height: 40px; display: flex; align-items: center; gap: 10px; padding: 0 12px; border: 0; border-radius: 9px; background: transparent; color: var(--fg-soft); font: 500 12px var(--font-body); text-align: left; text-decoration: none; cursor: pointer; }
+.profile-menu a:hover { background: var(--card-2); color: var(--fg); }
+.profile-menu-divider { height: 1px; margin: 6px 4px; background: var(--line); }
+.profile-menu #btn-logout { color: #ef4444; font-weight: 600; }
+.profile-menu #btn-logout:hover { background: rgba(239,68,68,.1); }
+.profile-menu #btn-logout svg { width: 16px; height: 16px; }
+.icon-btn { position: relative; }
+.notifications-popover { position: absolute; z-index: 30; top: calc(100% + 10px); right: 0; width: min(340px, calc(100vw - 32px)); max-height: 360px; overflow: auto; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #11171b; color: var(--fg); box-shadow: 0 16px 40px rgba(0,0,0,.38); }
+.notifications-popover[hidden] { display: none; }
+.notifications-popover > strong { display: block; margin: 0 0 8px; font-size: 13px; }
+.notifications-list { color: var(--muted); font-size: 12px; }
+.notification-item { display: grid; gap: 3px; padding: 10px 0; border-top: 1px solid var(--line); color: var(--fg-soft); }
+.notification-item small { color: var(--muted); font-size: 10px; }
+@media (max-width: 620px) { .profile-menu-wrap .user div { display: none; } }

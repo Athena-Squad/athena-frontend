@@ -53,7 +53,7 @@ document.addEventListener('click', function (ev) {
   if (again) again.focus();
 });
 
-// Cronômetro do botão "Iniciar treino"
+// Cronômetro do bot�o "Iniciar treino"
 var timer = null, secs = 0;
 function fmt(s) { return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); }
 $('start').addEventListener('click', function () {
@@ -71,12 +71,11 @@ $('start').addEventListener('click', function () {
   }
 });
 
-// Saudação conforme a hora
+// Sauda��o conforme a hora
 var h = new Date().getHours();
 $('saudacao').textContent = (h < 12 ? 'Bom dia' : h < 18 ? 'Boa tarde' : 'Boa noite') + ', Ana 👋';
 
-document.querySelectorAll('.nav a').forEach(function (a) {
-  a.addEventListener('click', function (e) { e.preventDefault(); });
+
 });
 render();
 })();

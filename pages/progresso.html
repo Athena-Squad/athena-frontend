@@ -1,10 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head>
+  <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Athena Progresso</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="../css/progresso.css">
+  <link rel="stylesheet" href="../css/profile-menu.css">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
@@ -25,7 +28,7 @@
   </defs>
 </svg>
 
-<div class="app">
+<div class="app" data-profile-area="professor">
   <aside class="side">
     <div class="brand">
       <svg class="logo" viewBox="0 0 48 28" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" aria-hidden="true">
@@ -35,33 +38,45 @@
     </div>
 
     <nav class="nav" aria-label="Menu principal">
-      <a href="#"><svg class="i"><use href="#i-home"/></svg>Início</a>
-      <a href="#"><svg class="i"><use href="#i-users"/></svg>Base de Alunos</a>
-      <a href="#"><svg class="i"><use href="#i-dumbbell"/></svg>Fichas de Treino</a>
-      <a href="#"><svg class="i"><use href="#i-chart"/></svg>Avaliações</a>
-      <a href="#" aria-current="page"><svg class="i"><use href="#i-trend-up"/></svg>Progresso</a>
-      <a href="#"><svg class="i"><use href="#i-calendar"/></svg>Calendário</a>
-      <a href="#"><svg class="i"><use href="#i-message"/></svg>Mensagens<span class="badge">3</span></a>
-      <a href="#"><svg class="i"><use href="#i-wallet"/></svg>Financeiro</a>
-      <a href="#"><svg class="i"><use href="#i-settings"/></svg>Configurações</a>
+      <a href="./base-alunos.html"><svg class="i"><use href="#i-home"/></svg>Início</a>
+      <a href="./base-alunos.html"><svg class="i"><use href="#i-users"/></svg>Base de Alunos</a>
+      <a href="./fichas-treino.html"><svg class="i"><use href="#i-dumbbell"/></svg>Fichas de Treino</a>
+      <a ><svg class="i"><use href="#i-chart"/></svg>Avaliações</a>
+      <a href="./progresso.html" aria-current="page"><svg class="i"><use href="#i-trend-up"/></svg>Progresso</a>
+      <a ><svg class="i"><use href="#i-calendar"/></svg>Calendário</a>
+      <a ><svg class="i"><use href="#i-message"/></svg>Mensagens<span class="badge">3</span></a>
+      <a ><svg class="i"><use href="#i-wallet"/></svg>Financeiro</a>
+      <a ><svg class="i"><use href="#i-settings"/></svg>Configurações</a>
     </nav>
 
     <div class="side-foot">
       <div class="quote">
-        <p>“Grandes resultados não vêm do acaso, mas da constância.”</p>
+        <p>“Grandes resultados não vêm do acaso, mas da constância.?�</p>
         <div class="rule"><svg class="i"><use href="#i-dumbbell"/></svg><i></i></div>
       </div>
       <p class="ver">Athena Personal Trainer &nbsp;v1.0</p>
+      
     </div>
   </aside>
 
   <main class="main">
     <header class="topbar">
       <div>
-        <p class="eyebrow">Evolução dos últimos 2 meses</p>
+        <p class="eyebrow" data-profile-greeting>Olá!</p>
         <h1>Progresso</h1>
       </div>
       <div class="tools">
+        <div class="profile-menu-wrap" data-profile>
+  <button class="user" type="button" aria-label="Menu do usuario" aria-expanded="false" aria-controls="profile-menu" data-profile-toggle>
+    <span class="avatar" data-profile-initials>??</span><div><b data-profile-name>Carregando...</b><small data-profile-role></small></div><svg class="i profile-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+  </button>
+  <div class="profile-menu" id="profile-menu" data-profile-menu hidden>
+    <div class="profile-menu-head"><strong data-profile-name>Carregando...</strong><span data-profile-role></span></div>
+    <a href="./base-alunos.html" data-profile-shortcut>Minha base de alunos</a>
+    <div class="profile-menu-divider" role="separator"></div>
+    <button id="btn-logout" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"/></svg>Sair da conta</button>
+  </div>
+</div>
         <label class="select" for="aluno">
           <select id="aluno" aria-label="Aluno">
             <option>Ana Ribeiro</option>
@@ -72,8 +87,8 @@
           <svg class="i"><use href="#i-search"/></svg>
           <input id="busca" type="search" placeholder="Buscar..." autocomplete="off">
         </label>
-        <button class="icon-btn" type="button" aria-label="Notificações"><svg class="i"><use href="#i-bell"/></svg><span class="dot-on"></span></button>
-        <div class="avatar" title="Sandro Joaquim">SJ</div>
+        <button class="icon-btn" type="button" aria-label="Notificações"><svg class="i"><use href="#i-bell"/></svg><span class="dot-on" hidden></span></button>
+        
       </div>
     </header>
 
@@ -190,10 +205,9 @@
   }).join('');
 
   // Itens de menu de outras telas ainda sem página
-  document.querySelectorAll('.nav a').forEach(function (a) {
-    a.addEventListener('click', function (e) { e.preventDefault(); });
-  });
+  
 })();
 </script>
 
+<script type="module" src="../js/profile-menu.js"></script>
 </body></html>

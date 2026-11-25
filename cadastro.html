@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena | Cadastro de aluno</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card registration-card">
+            <div class="logo">
+                <svg class="dumbbell-icon" viewBox="0 0 64 40" role="img" aria-label="Halter">
+                    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 2">
+                        <path d="M18 20h28" />
+                        <path d="M14 12h4v16h-4zM8 15h6v10H8zM5 18h3v4H5z" />
+                        <path d="M46 12h4v16h-4zM50 15h6v10h-6zM56 18h3v4h-3z" />
+                    </g>
+                </svg>
+            </div>
+
+            <h1>Crie sua conta</h1>
+            <p class="subtitle">Comece seu acompanhamento no Athena</p>
+
+            <form id="form-cadastro">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Mínimo de 6 caracteres" autocomplete="new-password" minlength="6" required>
+
+                <label for="objetivo">Objetivo principal</label>
+                <input type="text" id="objetivo" name="objetivo" placeholder="Ex.: Hipertrofia, emagrecimento...">
+
+                <p id="cadastro-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+                <button type="submit" class="submit">Criar conta de aluno</button>
+            </form>
+
+            <a class="form-link" href="./index.html">Já possui conta? Entrar no sistema</a>
+        </section>
+    </main>
+
+    <script type="module">
+        import { cadastrarAluno } from './js/api.js';
+
+        const form = document.getElementById('form-cadastro');
+        const feedback = document.getElementById('cadastro-feedback');
+        const submitButton = form.querySelector('.submit');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            feedback.textContent = '';
+            feedback.className = 'form-feedback';
+            feedback.style.display = 'none';
+            submitButton.disabled = true;
+            submitButton.textContent = 'Criando conta...';
+
+            try {
+                await cadastrarAluno({
+                    nomeCompleto: document.getElementById('nome').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    senha: document.getElementById('senha').value,
+                    objetivo: document.getElementById('objetivo').value.trim()
+                });
+
+                feedback.textContent = 'Conta criada com sucesso! Redirecionando para seu painel...';
+                feedback.classList.add('success');
+                feedback.style.display = 'block';
+                window.setTimeout(() => {
+                    window.location.href = './pages/painel-aluno.html';
+                }, 800);
+            } catch (error) {
+                feedback.textContent = error.message || 'Não foi possível criar sua conta. Tente novamente.';
+                feedback.classList.add('error');
+                feedback.style.display = 'block';
+                submitButton.disabled = false;
+                submitButton.textContent = 'Criar conta de aluno';
+            }
+        });
+    </script>
+</body>
+</html>

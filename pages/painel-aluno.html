@@ -1,13 +1,16 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+    
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Athena Treino de Hoje</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="../css/aluno.css">
+  <link rel="stylesheet" href="../css/profile-menu.css">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -28,7 +31,7 @@
   </defs>
 </svg>
 
-<div class="app">
+<div class="app" data-profile-area="aluno">
   <aside class="side">
     <div class="brand">
       <svg class="logo" viewBox="0 0 48 28" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" aria-hidden="true">
@@ -38,21 +41,25 @@
     </div>
 
     <nav class="nav" aria-label="Menu principal">
-      <a href="#" aria-current="page"><svg class="i"><use href="#i-dumbbell"/></svg>Treinos</a>
+      <a href="./painel-aluno.html" aria-current="page"><svg class="i"><use href="#i-dumbbell"/></svg>Treinos</a>
     </nav>
+    <div class="side-foot"></div>
   </aside>
 
   <main class="main">
     <div class="col">
       <header class="topbar">
         <div>
-          <p class="eyebrow" id="saudacao">Boa tarde, Ana 👋</p>
+          <p class="eyebrow" id="saudacao" data-profile-greeting>Ola!</p>
           <h1>Treino de Hoje</h1>
-          <p class="when">Terça · 20 out · Hipertrofia ABC — Treino A</p>
+          <p class="when">Terça · 20 out · Hipertrofia ABC �” Treino A</p>
         </div>
         <div class="tools">
-          <button class="icon-btn" type="button" aria-label="Notificações"><svg class="i"><use href="#i-bell"/></svg><span class="dot-on"></span></button>
-          <span class="avatar" title="Ana Ribeiro">AR</span>
+          <button class="icon-btn" type="button" aria-label="Notificações"><svg class="i"><use href="#i-bell"/></svg><span class="dot-on" hidden></span></button>
+          <div class="profile-menu-wrap" data-profile>
+  <button class="user" type="button" aria-label="Menu do usuario" aria-expanded="false" aria-controls="profile-menu" data-profile-toggle><span class="avatar" data-profile-initials>??</span><div><b data-profile-name>Carregando...</b><small data-profile-role></small></div><svg class="i profile-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+  <div class="profile-menu" id="profile-menu" data-profile-menu hidden><div class="profile-menu-head"><strong data-profile-name>Carregando...</strong><span data-profile-role></span></div><a href="./painel-aluno.html" data-profile-shortcut>Meu treino atual</a><div class="profile-menu-divider" role="separator"></div><button id="btn-logout" type="button"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"/></svg>Sair da conta</button></div>
+</div>
         </div>
       </header>
 
@@ -80,5 +87,6 @@
 </div>
 
 <script src="../js/painel-aluno.js"></script>
+<script type="module" src="../js/profile-menu.js"></script>
 </body>
 </html>

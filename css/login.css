@@ -124,3 +124,42 @@ input {
   color: #fff;
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.35));
 }
+
+.form-feedback {
+  display: none;
+  margin: 0 0 15px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.form-feedback.error {
+  color: #fca5a5;
+}
+
+.form-feedback.success {
+  color: #86efac;
+}
+
+.form-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #94a3b8;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.form-link:hover {
+  color: #fff;
+}
+
+.registration-card {
+  width: min(100% - 32px, 400px);
+}
+
+@media (max-height: 720px) {
+  body {
+    min-height: 100vh;
+    height: auto;
+    padding: 24px 0;
+  }
+}
